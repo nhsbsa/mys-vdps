@@ -1,0 +1,83 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Vaccine Damage Payment Scheme
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Change the page title here -->
+      
+      <header class="page-header">
+          <span class="heading-secondary">Vaccine Damage Payment Scheme</span>
+          <h1 class="nhsuk-heading-l govuk-heading-l">Part 1 - personal details</h1>
+      </header>
+
+      <h3>About you if you are not the disabled person</h3>
+          <form action="about-you-2" method="get" class="form">
+
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="part1-surname">
+                      Surname or family name
+                    </label>
+                    <input class="nhsuk-input nhsuk-input--width-20" id="part1-surname" name="part1-surname" type="text">
+                  </div><br>
+
+                  <label class="nhsuk-label" for="part1-other-names">
+                      All other names (in full)
+                  </label>
+                  <div class="nhsuk-form-group">
+                    <input class="nhsuk-input nhsuk-input--width-20" id="part1-other-names" name="part1-other-names" type="text">
+                  </div><br>
+
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="part1-other-surname">
+                      Any other surnames or family names you have been known by or are using now
+                    </label>
+                    <input class="nhsuk-input nhsuk-input--width-20" id="part1-other-surname" name="part1-other-surname" type="text">
+                  </div>
+
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="town-address">
+                      Town or city
+                    </label>
+                    <input class="nhsuk-input nhsuk-input--width-20" id="town-address" name="town-address" type="text">
+                  </div>
+
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="post-code">
+                      Postcode
+                    </label>
+                    <input class="nhsuk-input nhsuk-input--width-10" id="post-code" name="post-code" type="text">
+                  </div>
+
+                  <br>
+                      <button class="nhsuk-button" type="submit">
+                                Continue
+                      </button>
+          </form>       
+      
+
+
+    </div>
+  </div>
+{% endblock %}

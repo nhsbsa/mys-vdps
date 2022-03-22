@@ -36,58 +36,55 @@
 
                 <header class="page-header">
                   <span class="heading-secondary">PA Admin Portal</span>
-                  <h1 class="nhsuk-heading-l govuk-heading-l">Update contractor personal details</h1>
+                  <h1 class="nhsuk-heading-l govuk-heading-l">Create contractor personal details</h1>
                 </header>
-
-                <h3>Amend any fields which need updating, then select continue</h3>
-
-                <form action="update-contractor-personal-cya" method="get" class="form">
+                <h3>What is the contractor's trading name?</h3>
+                <form action="create-contractor-2" method="get" class="form">
 
                   <div class="nhsuk-form-group">
-                    <label class="nhsuk-label" for="contractor-name">
-                      ODS codes
-                    </label>
-                    <input class="nhsuk-input nhsuk-input--width-10" id="contractor-name" name="contractor-name" type="text">
-                  </div>
-
-                  <div class="nhsuk-form-group">
-                    <label class="nhsuk-label" for="contractor-name">
+                    <label class="nhsuk-label" for="contractor-name-test">
                       Contractor trading name
                     </label>
-                    <input class="nhsuk-input nhsuk-input--width-20" id="contractor-name" name="contractor-name" type="text">
+                    <input class="nhsuk-input nhsuk-input--width-20" id="contractor-name-test" name="contractor-name-test" type="text">
                   </div>
-
+                  <br>
+                  <h3>What is the contractor's email address?</h3>
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="email-address">
+                      Email address
+                    </label>
+                    <input class="nhsuk-input nhsuk-input--width-20" id="email-address" name="email-address" type="text">
+                  </div>
+<br>
+                  <h3>What is the contractor's address?</h3>
                   <div class="nhsuk-form-group">
                     <label class="nhsuk-label" for="street-address">
-                      Contractor address building and street
+                      Building and street
                     </label>
                     <input class="nhsuk-input nhsuk-input--width-20" id="street-address" name="street-address" type="text">
                   </div>
 
                   <div class="nhsuk-form-group">
-                    <input class="nhsuk-input nhsuk-input--width-20" id="street-address" name="street-address" type="text">
+                    <label class="nhsuk-label" for="street-address">
+                      (Optional)
+                    </label>
+                    <input class="nhsuk-input nhsuk-input--width-20" id="optional-address" name="optional-address" type="text">
                   </div>
 
                   <div class="nhsuk-form-group">
-                    <label class="nhsuk-label" for="street-address">
-                      Contractor address town or city
+                    <label class="nhsuk-label" for="town-address">
+                      Town or city
                     </label>
-                    <input class="nhsuk-input nhsuk-input--width-20" id="street-address" name="street-address" type="text">
+                    <input class="nhsuk-input nhsuk-input--width-20" id="town-address" name="town-address" type="text">
                   </div>
 
                   <div class="nhsuk-form-group">
                     <label class="nhsuk-label" for="post-code">
-                      Contractor postcode
+                      Postcode
                     </label>
-                    <input class="nhsuk-input nhsuk-input--width-20" id="post-code" name="post-code" type="text">
+                    <input class="nhsuk-input nhsuk-input--width-10" id="post-code" name="post-code" type="text">
                   </div>
 
-                  <div class="nhsuk-form-group">
-                    <label class="nhsuk-label" for="email-address">
-                      Contractor email address
-                    </label>
-                    <input class="nhsuk-input nhsuk-input--width-20" id="email-address" name="email-address" type="text">
-                  </div>
                   <br>
                       <button class="nhsuk-button" type="submit">
                                 Continue
