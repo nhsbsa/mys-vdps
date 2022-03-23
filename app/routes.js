@@ -521,4 +521,53 @@ router.get(/updateOdsConfirm/, function (req, res) {
   }
 });
 
+// VDPR routes //
+router.get(/choosePath/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('part2-about-you-name-dob-ni'); 
+  } else {
+    res.redirect('part1-about-you-name-dob-ni');
+  }
+});
+
+router.get(/chooseGuardian/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('part2-about-you-name-dob-ni'); 
+  } else {
+    res.redirect('part1-guardian-name-address');
+  }
+});
+
+router.get(/addVaccine/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('part3-vaccine-q1'); 
+  } else {
+    res.redirect('part3-vaccinations');
+  }
+});
+
+router.get(/countryVaccine/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('part3-vaccine-q1-text'); 
+  } else {
+    res.redirect('part3-vaccine-q2');
+  }
+});
+
+router.get(/addHospitalDate/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('part5-hospital-visit-dates'); 
+  } else {
+    res.redirect('part5-add-hospital-question');
+  }
+});
+
+router.get(/addHospital/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('part5-hospitals'); 
+  } else {
+    res.redirect('part7-declaration');
+  }
+});
+
 module.exports = router;

@@ -1,0 +1,64 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Vaccine Damage Payment Scheme
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Change the page title here -->
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">VDPS</span>
+          Declaration A1
+      </h1>
+
+      <p><b>I claim payment</b> in respect of damage caused to the disabled person by vaccination, details of which I have given in <b>Part 3</b> on behalf of persons named in <b>Part 2</b>.
+
+      <p><b>I declare</b> that the information I have given on this form is correct and complete.
+
+      <p>I understand that NHSBSA may use and share information I provide in relation to this claim internally and with Department of Health and Social Care (DHSC), NHS England and NHS 
+          Improvement (NHSEI) and NHS Counter Fraud Authority (NHSCFA) for the purposes of the prevention, detection, loss measurement, investigation and prosecution of fraud or any other 
+            unlawful activity affecting the NHS.
+      <p>By agreeing with and signing this declaration, I accept and agree to all the conditions specified above. I understand that if I withhold information or provide false or misleading 
+          information, disciplinary action may be taken against me, and I may be liable to prosecution and / or civil proceedings.  NHSBSA may use that the information I have given on this 
+          form is correct and complete.</p>
+
+        
+<br>
+          <div class="nhsuk-checkboxes">
+              <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              I agree and accept this declaration
+              </label>
+              </div>
+          </div>
+<br><br>
+                  <form action="part7-declaration" method="post" novalidate>
+                      <button class="nhsuk-button" type="submit">
+                                Submit
+                      </button>
+                  </form>
+    
+    </div>
+  </div>
+{% endblock %}
