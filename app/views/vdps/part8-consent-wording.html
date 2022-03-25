@@ -1,0 +1,62 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Vaccine Damage Payment Scheme
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Change the page title here -->
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">VDPS</span>
+          Consent for access of medical records
+      </h1>
+
+      <p>We may need to obtain the disabled person’s medical records from their GP or organisations that
+          they are involved with, in order to work out whether they are entitled to a vaccine damage payment
+          or to help deal with any appeal against a decision of the Secretary of State about the claim. We will
+          only obtain this information with the disabled person’s consent. Once consent is given it can still be 
+          withdrawn at any point by writing to the decision maker dealing with the claim. However, if the decision 
+          maker does not have consent to access these medical records, they may not have all the information they 
+          need to make a decision on the vaccine damage payment claim.</p>
+
+        <ol>
+          <li>If the disabled person is over the age of 16 and capable of giving their consent for access to their medical records, they should give their own consent.</li>
+          <li>If the disabled person is a child under the age of 16, consent should normally be given by the person with parental responsibility for them, for example a parent or legal guardian.</li>
+          <li>If the disabled person is over the age of 16 but incapable of giving their own consent,their representative can provide consent on their behalf.</li>
+        </ol>
+  
+
+
+      <p>By capable of giving their own consent we mean that the disabled person understands the reasons for, and 
+          the implications of, giving their consent.</p>
+        
+<br>
+                  <form action="part8-consent-question1" method="post" novalidate>
+                      <button class="nhsuk-button" type="submit">
+                                Continue
+                      </button>
+                  </form>
+    
+    </div>
+  </div>
+{% endblock %}

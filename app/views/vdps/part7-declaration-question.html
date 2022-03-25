@@ -36,21 +36,39 @@
       <!-- Change the page title here -->
       <h1>
         <span class="nhsuk-caption-xl nhsuk-caption--bottom">VDPS</span>
-          Country vaccination administered - details
+          Are you the disabled person?
       </h1>
 
                   <div class="nhsuk-form-group">
-                      <label class="nhsuk-label" for="example">
-                          Tell us which vaccinations were given elsewhere and in which country they were given.
-                      </label>
-                      <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
-                  </div>
+                    <form action="chooseDisabled"
+                      class="form"
+                      method="get">
+                      <fieldset class="nhsuk-fieldset">
+                          <h1 class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">Choose an option</legend></h1>
+                        
+                          <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input"
+                                id="add-1"
+                                name="radioInlineGroup"
+                                type="radio"
+                                value="Yes"> <label class="nhsuk-label nhsuk-radios__label"
+                                for="add-another-1">Yes</label>
+                          </div><br>
 
-                          <form action="part3-vaccine-after-text" method="post" novalidate>
-                              <button class="nhsuk-button" type="submit">
-                                Continue
-                              </button>
-                          </form>
+                          <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input"
+                                id="add-2"
+                                name="radioInlineGroup"
+                                type="radio"
+                                value="No"> <label class="nhsuk-label nhsuk-radios__label"
+                                for="add-another-2">No</label>
+                          </div><br>
+
+                      </fieldset>
+                      <br>
+
+                      <button class="nhsuk-button"
+                        type="submit">Continue</button>
       
                     </form>
                   </div>

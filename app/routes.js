@@ -522,9 +522,12 @@ router.get(/updateOdsConfirm/, function (req, res) {
 });
 
 // VDPR routes //
+
 router.get(/choosePath/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
     res.redirect('part2-about-you-name-dob-ni'); 
+  } else if (req.query.radioInlineGroup === "Other" ) {
+    res.redirect('part1-evidence');
   } else {
     res.redirect('part1-about-you-name-dob-ni');
   }
@@ -566,7 +569,23 @@ router.get(/addHospital/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
     res.redirect('part5-hospitals'); 
   } else {
-    res.redirect('part7-declaration');
+    res.redirect('part7-declaration-question');
+  }
+});
+
+router.get(/chooseDisabled/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('part7-declaration-a2'); 
+  } else {
+    res.redirect('part7-declaration-a1');
+  }
+});
+
+router.get(/chooseConsent/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('part8-declaration-b2'); 
+  } else {
+    res.redirect('part8-declaration-b1');
   }
 });
 

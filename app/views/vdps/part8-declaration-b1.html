@@ -1,0 +1,124 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Vaccine Damage Payment Scheme
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Change the page title here -->
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">VDPS</span>
+          Declaration B1
+      </h1>
+
+      <p>I confirm that I am acting on behalf of the disabled person, because they are not capable of giving their own consent for 
+          access to their medical records. I consent to the access and examination of their medical records in connection with the 
+          claim or any appeal made under the Vaccine Damage Payments Act 1979.</p>
+
+      <p><b>I agree that</b></p>
+        <ul>
+          <li>the NHS Business Services Authority</li>
+          <li>any doctor advising the NHS Business Services Authority</li>
+          <li>any organisation with which the NHS Business Services Authority has a contract for the provision of
+                medical services or any doctor providing services to that organisation</li>
+        </ul>
+
+      <p>may ask any of the people or organisations mentioned on this form for any information which is needed to deal with</p>
+      <p>and that such information may be given to that doctor, organisation or the NHS Business Services Authority; and to the 
+          Department of Health and Social Care to help carry out its policy responsibilities for the Vaccine Damage Payments Scheme.</p>
+
+        <ul>
+          <li>this claim for a Vaccine Damage Payment or</li>
+          <li>any request for this claim to be looked at again</li>
+        </ul>
+<br>
+          <div class="nhsuk-checkboxes">
+              <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              I agree and accept this declaration
+              </label>
+              </div>
+          </div>
+<br><br>
+
+
+              <form>
+
+                <div class="nhsuk-form-group">
+
+                  <fieldset class="nhsuk-fieldset" aria-describedby="symptoms-hint">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                      <h1 class="nhsuk-fieldset__heading">
+                        Tick the box that applies to you
+                      </h1>
+                    </legend>
+
+                    <div class="nhsuk-checkboxes">
+
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="symptoms-1" name="symptoms" type="checkbox" value="sorethroat" data-checkbox-exclusive-group="symptoms-list">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="symptoms-1">
+                          I am the parent or legal guardian of the disabled person.
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="symptoms-2" name="symptoms" type="checkbox" value="runnynose" data-checkbox-exclusive-group="symptoms-list">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="symptoms-2">
+                          I have been appointed by the court to manage the affairs of the disabled person.
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="symptoms-3" name="symptoms" type="checkbox" value="muscleorjointpain" data-checkbox-exclusive-group="symptoms-list">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="symptoms-3">
+                          I am acting on behalf of the disabled person, aged 16 or over, because they are unable to manage their own affairs
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-checkboxes__divider">or</div>
+
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="symptoms-5" name="symptoms" type="checkbox" value="none" data-checkbox-exclusive data-checkbox-exclusive-group="symptoms-list">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="symptoms-5">
+                          I am the personal representative of the disabled person who has died.
+                        </label>
+                      </div>
+
+                    </div>
+                  </fieldset>
+
+                </div>
+
+              </form>
+              <br>
+                  <form action="part10-done" method="post" novalidate>
+                      <button class="nhsuk-button" type="submit">
+                                Submit
+                      </button>
+                  </form>
+    
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,62 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Vaccine Damage Payment Scheme
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Change the page title here -->
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">VDPS</span>
+          Upload evidence
+      </h1>
+
+      <form class="form" action="attachments-add" method="post">
+
+        <div class="nhsuk-form-group">
+          
+          <span id="file-upload-1-hint" class="mhsuk-hint">
+            <p>Evidence should be certificate.</p>
+
+            <p>You can upload your evidence as a scanned copy or photo of the original. </p>
+        
+          <p>Your uploaded file must be:</p>
+          <ul class="nhsuk-list govuk-list--bullet">
+              <li>a jpg, jpeg, bmp, png or pdf</li>
+              <li>a file size no larger than 2MB</li>
+              <li>show [your name] and [the date]</li>
+            </ul>
+          </span>
+          
+          <input class="nhsuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-hint">
+        </div>
+<br>          
+            <button class="nhsuk-button" type="submit">
+                      Continue
+            </button>
+      </form>
+
+      
+    </div>
+  </div>
+{% endblock %}
