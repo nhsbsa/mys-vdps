@@ -32,19 +32,27 @@
             </svg>
             Go back</a>
         </div>
-
       <!-- Change the page title here -->
-      <h1>
-        <span class="nhsuk-caption-xl nhsuk-caption--bottom">VDPS</span>
-          Are you the disabled person?
-      </h1>
+      
+      <header class="page-header">
+          <span class="heading-secondary">Vaccine Damage Payment Scheme</span>
+          <h1 class="nhsuk-heading-l govuk-heading-l">What is the name of the consultant?</h1>
+      </header>
 
+          <form action="addHospital" method="get" class="form">
+
+                  <label class="nhsuk-label" for="part1-other-surname">
+                      Consultant's name
+                  </label>
                   <div class="nhsuk-form-group">
-                    <form action="chooseDisabled"
-                      class="form"
-                      method="get">
+                    <input class="nhsuk-input nhsuk-input--width-20" id="surname" name="surname" type="text">
+                  </div><br>
+
                       <fieldset class="nhsuk-fieldset">
+                          <h1 class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">Do you want to add another hosptial visit?</legend></h1>
                         
+                        <div class="nhsuk-radios nhsuk-radios--inline">
+
                           <div class="nhsuk-radios__item">
                             <input class="nhsuk-radios__input"
                                 id="add-1"
@@ -52,7 +60,7 @@
                                 type="radio"
                                 value="Yes"> <label class="nhsuk-label nhsuk-radios__label"
                                 for="add-another-1">Yes</label>
-                          </div><br>
+                          </div>
 
                           <div class="nhsuk-radios__item">
                             <input class="nhsuk-radios__input"
@@ -61,7 +69,9 @@
                                 type="radio"
                                 value="No"> <label class="nhsuk-label nhsuk-radios__label"
                                 for="add-another-2">No</label>
-                          </div><br>
+                          </div>
+
+                        </div><br>
 
                       </fieldset>
                       <br>
@@ -69,8 +79,9 @@
                       <button class="nhsuk-button"
                         type="submit">Continue</button>
       
-                    </form>
-                  </div>
+          </form>       
+      
+
 
     </div>
   </div>

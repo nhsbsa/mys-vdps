@@ -36,34 +36,49 @@
       <!-- Change the page title here -->
       <h1>
         <span class="nhsuk-caption-xl nhsuk-caption--bottom">VDPS</span>
-          Are you the disabled person?
+          Previous claim
       </h1>
 
                   <div class="nhsuk-form-group">
-                    <form action="chooseDisabled"
+                    <form action="part2-vaccinated-person-name"
                       class="form"
                       method="get">
-                      <fieldset class="nhsuk-fieldset">
-                        
-                          <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input"
-                                id="add-1"
-                                name="radioInlineGroup"
-                                type="radio"
-                                value="Yes"> <label class="nhsuk-label nhsuk-radios__label"
-                                for="add-another-1">Yes</label>
-                          </div><br>
+                      <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+        <h1 class="nhsuk-fieldset__heading">
+          Why is this claim being made?
+        </h1>
+      </legend>
 
-                          <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input"
-                                id="add-2"
-                                name="radioInlineGroup"
-                                type="radio"
-                                value="No"> <label class="nhsuk-label nhsuk-radios__label"
-                                for="add-another-2">No</label>
-                          </div><br>
+      <div class="nhsuk-hint" id="example-hint">
+        Tick one box to tell us why this claim is being made.
+      </div>
 
-                      </fieldset>
+      <div class="nhsuk-checkboxes">
+
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+            The disabled person was vaccinated.
+          </label>
+        </div>
+
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+            The disabled person’s mother was vaccinated while pregnant. Please give details below of the person who was vaccinated.
+          </label>
+        </div>
+
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+            The disabled person has been in close physical contact with a person who has been vaccinated against poliomyelitis (Polio) by the orally administered vaccine. Please give details below of the person who was vaccinated.
+          </label>
+        </div>
+
+      </div>
+    </fieldset>
                       <br>
 
                       <button class="nhsuk-button"

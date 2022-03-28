@@ -525,19 +525,19 @@ router.get(/updateOdsConfirm/, function (req, res) {
 
 router.get(/choosePath/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
-    res.redirect('part2-about-you-name-dob-ni'); 
+    res.redirect('part2-disabled-persons-name'); 
   } else if (req.query.radioInlineGroup === "Other" ) {
-    res.redirect('part1-evidence');
+    res.redirect('part1-attachments');
   } else {
-    res.redirect('part1-about-you-name-dob-ni');
+    res.redirect('part1-about-you-name');
   }
 });
 
 router.get(/chooseGuardian/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
-    res.redirect('part2-about-you-name-dob-ni'); 
+    res.redirect('part1-cya'); 
   } else {
-    res.redirect('part1-guardian-name-address');
+    res.redirect('part1-guardian-name');
   }
 });
 
@@ -554,14 +554,6 @@ router.get(/countryVaccine/, function (req, res) {
     res.redirect('part3-vaccine-q1-text'); 
   } else {
     res.redirect('part3-vaccine-q2');
-  }
-});
-
-router.get(/addHospitalDate/, function (req, res) {
-  if (req.query.radioInlineGroup === "Yes" ) {
-    res.redirect('part5-hospital-visit-dates'); 
-  } else {
-    res.redirect('part5-add-hospital-question');
   }
 });
 
@@ -586,6 +578,46 @@ router.get(/chooseConsent/, function (req, res) {
     res.redirect('part8-declaration-b2'); 
   } else {
     res.redirect('part8-declaration-b1');
+  }
+});
+
+router.get(/underSixteen/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('part4-clinic'); 
+  } else {
+    res.redirect('part5-hospitals');
+  }
+});
+
+router.get(/moreEvidence/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('part1-attachments'); 
+  } else {
+    res.redirect('part1-about-you-name');
+  }
+});
+
+router.get(/Partner/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('part2-partner-name'); 
+  } else {
+    res.redirect('part2-previous-claim-question');
+  }
+});
+
+router.get(/previousClaim/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('part2-previous-claim-ref'); 
+  } else {
+    res.redirect('part2-why-claim-is-being-made');
+  }
+});
+
+router.get(/personDeceased/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('part2-disabled-persons-date-of-death'); 
+  } else {
+    res.redirect('part2-disabled-persons-nhs-no');
   }
 });
 

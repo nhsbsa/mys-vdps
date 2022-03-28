@@ -32,26 +32,28 @@
             </svg>
             Go back</a>
         </div>
-
       <!-- Change the page title here -->
-      <h1>
-        <span class="nhsuk-caption-xl nhsuk-caption--bottom">VDPS</span>
-          After vaccination information
-      </h1>
+      
+      <header class="page-header">
+          <span class="heading-secondary">Vaccine Damage Payment Scheme</span>
+          <h1 class="nhsuk-heading-l govuk-heading-l">What is the previous claim reference number?</h1>
+      </header>
 
+          <form action="part2-why-claim-is-being-made" method="get" class="form">
+
+                  <label class="nhsuk-label" for="part1-other-surname">
+                      Reference number
+                  </label>
                   <div class="nhsuk-form-group">
-                      <label class="nhsuk-label" for="example">
-                          Tell us what happened after the vaccination. It would be helpful if you could tell us which vaccinations this claim relates to.
-                      </label>
-                      <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
-                  </div>
+                    <input class="nhsuk-input nhsuk-input--width-20" id="surname" name="surname" type="text">
+                  </div><br>
 
-                      <form action="part4-details-of-gp" method="post" novalidate>
                       <button class="nhsuk-button" type="submit">
                                 Continue
                       </button>
-                      </form>
- 
+          </form>       
+      
+
 
     </div>
   </div>
