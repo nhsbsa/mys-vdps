@@ -561,7 +561,7 @@ router.get(/addHospital/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
     res.redirect('part5-hospitals'); 
   } else {
-    res.redirect('part7-declaration-question');
+    res.redirect('part5-cya');
   }
 });
 
