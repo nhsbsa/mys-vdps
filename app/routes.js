@@ -527,7 +527,7 @@ router.get(/choosePath/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
     res.redirect('part2-disabled-persons-name'); 
   } else if (req.query.radioInlineGroup === "Other" ) {
-    res.redirect('part1-attachments');
+    res.redirect('part2-disabled-persons-date-of-death');
   } else {
     res.redirect('part1-about-you-name');
   }
@@ -537,7 +537,7 @@ router.get(/chooseGuardian/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
     res.redirect('part1-cya'); 
   } else {
-    res.redirect('part1-guardian-name');
+    res.redirect('part1-about-you-relationship');
   }
 });
 
