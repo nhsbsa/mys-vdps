@@ -541,17 +541,67 @@ router.get(/chooseGuardian/, function (req, res) {
   }
 });
 
-router.get(/addVaccine/, function (req, res) {
+router.get(/addVaccineDate/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
-    res.redirect('part3-vaccine-q1'); 
+    res.redirect('part3-vaccination-date'); 
   } else {
-    res.redirect('part3-vaccinations');
+    res.redirect('part3-vaccination-add');
   }
 });
 
+router.get(/addVdpsVaccine/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('part3-vaccination'); 
+  } else {
+    res.redirect('part3-vaccination-summary');
+  }
+});
+
+router.get(/addVaccineLast/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('part3-vaccination'); 
+  } else {
+    res.redirect('part3-vaccine-q1');
+  }
+});
+
+router.get(/selectVaccineUk/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('part3-vaccine-after-text'); 
+  } else {
+    res.redirect('part3-vaccine-q1-summary');
+  }
+});
+
+router.get(/selectVaccineOut/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('part3-vaccine-q2-country'); 
+  } else {
+    res.redirect('part3-vaccine-q2');
+  }
+});
+
+router.get(/selectOutUk/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('part3-vaccine-after-text'); 
+  } else {
+    res.redirect('part3-vaccine-q2-list');
+  }
+});
+
+router.get(/selectVaccineCountry/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('part3-vaccine-q2'); 
+  } else {
+    res.redirect('part3-vaccine-q2-list');
+  }
+});
+
+
+
 router.get(/countryVaccine/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
-    res.redirect('part3-vaccine-q1-text'); 
+    res.redirect('part3-vaccine-q1-summary'); 
   } else {
     res.redirect('part3-vaccine-q2');
   }

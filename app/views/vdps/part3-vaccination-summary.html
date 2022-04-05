@@ -1,0 +1,142 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'layout-full-width.html' %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+  <!-- Set the page title inside the pageTitle block -->
+  {% block pageTitle %} VDPS {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+  {% block beforeContent %} {% endblock %} <!-- Your page content goes inside the content block -->
+  <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+  {% block content %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+              
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper"
+                id="maincontent">
+            <div class="nhsuk-grid-row">
+
+                <div class="nhsuk-back-link">
+                  <a class="nhsuk-back-link__link"
+                        href="javascript:history.back()"><svg aria-hidden="true"
+                        class="nhsuk-icon nhsuk-icon__chevron-left"
+                        viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path></svg> Go back</a>
+                </div>
+
+                <header class="page-header">
+                  <span class="heading-secondary">Vaccine Damage Payment Scheme</span>
+                  <h1 class="nhsuk-heading-l govuk-heading-l">Summary</h1>
+                </header>
+
+                  <table class="table-form">
+
+                    <thead role="rowgroup" class="nhsuk-table__head">
+                      <tr role="row">
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                          Vaccine
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                          Date vaccine administered
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                          Action
+                        </th>
+                      </tr>
+                    </thead>
+
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Diptheria, tetnus, prerussis, polio and Haemophilus influenzae type b (DtaP/IPV/Hib)</td>
+                        <td class="nhsuk-table__cell--align-right ">01 Jan 2022</td>
+                      <td class="nhsuk-table__cell--align-right">
+                        <a href="all-vaccine-table-dropdown-one-rec-amend">Delete vaccine</a></td>
+                      <td>
+                      </tr>
+
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Coronavirus (COVID-19)</td>
+                        <td class="nhsuk-table__cell--align-right ">01 Mar 2021</td>
+                      <td class="nhsuk-table__cell--align-right">
+                        <a href="all-vaccine-table-dropdown-one-rec-amend">Amend date</a> or <a href="delete">Delete vaccine</a></td>
+                      <td>
+                      </tr>
+
+                        <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Coronavirus (COVID-19)</td>
+                        <td class="nhsuk-table__cell--align-right ">01 Sep 2021</td>
+                      <td class="nhsuk-table__cell--align-right">
+                        <a href="all-vaccine-table-dropdown-one-rec-amend">Amend date</a> or <a href="delete">Delete vaccine</a></td>
+                      <td>
+                      </tr>
+
+                        <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Coronavirus (COVID-19)</td>
+                        <td class="nhsuk-table__cell--align-right ">01 Mar 2022</td>
+                      <td class="nhsuk-table__cell--align-right">
+                        <a href="all-vaccine-table-dropdown-one-rec-amend">Amend date</a> or <a href="delete">Delete vaccine</a></td>
+                      <td>
+                      </tr>
+                                
+                  </table>  
+                        
+
+                  <div class="nhsuk-form-group">
+                  <form action="addVaccineLast"
+                      class="form"
+                      method="get">
+                    <fieldset class="nhsuk-fieldset">
+                      <h1 class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">Do you want to add another vaccine?</legend></h1>
+                        <span class="nhsuk-hint">
+                    You can add each date you received this vaccine.
+                        </span>
+                        <br>
+                <div class="nhsuk-radios nhsuk-radios--inline">
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input"
+                              id="add-1"
+                              name="radioInlineGroup"
+                              type="radio"
+                              value="Yes"> <label class="nhsuk-label nhsuk-radios__label"
+                              for="add-another-1">Yes</label>
+                        </div>
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input"
+                              id="add-2"
+                              name="radioInlineGroup"
+                              type="radio"
+                              value="no"> <label class="nhsuk-label nhsuk-radios__label"
+                              for="add-another-2">No (I've entered all the vaccines and dates the vaccines were administered)</label>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <br>
+
+                    
+                  </div>
+
+                      <button class="nhsuk-button"
+                        type="submit">Continue</button>
+      
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+</body>
+</html>
