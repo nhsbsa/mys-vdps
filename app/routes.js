@@ -545,7 +545,7 @@ router.get(/addVaccineDate/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
     res.redirect('part3-vaccination-date'); 
   } else {
-    res.redirect('part3-vaccination-add');
+    res.redirect('part3-vaccination-summary');
   }
 });
 
@@ -561,7 +561,7 @@ router.get(/addVaccineLast/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
     res.redirect('part3-vaccination'); 
   } else {
-    res.redirect('part3-vaccine-q1');
+    res.redirect('part3-vaccine-q1-summary');
   }
 });
 
@@ -597,13 +597,19 @@ router.get(/selectVaccineCountry/, function (req, res) {
   }
 });
 
-
-
 router.get(/countryVaccine/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
-    res.redirect('part3-vaccine-q1-summary'); 
+    res.redirect('part3-vaccine-after-text'); 
   } else {
-    res.redirect('part3-vaccine-q2');
+    res.redirect('part3-armed-forces-q');
+  }
+});
+
+router.get(/armedForces/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('part3-vaccine-after-text'); 
+  } else {
+    res.redirect('part3-kick-out');
   }
 });
 
