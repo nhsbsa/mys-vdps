@@ -641,7 +641,7 @@ router.get(/underSixteen/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
     res.redirect('part4-clinic'); 
   } else {
-    res.redirect('part5-hospitals');
+    res.redirect('part4-cya');
   }
 });
 
