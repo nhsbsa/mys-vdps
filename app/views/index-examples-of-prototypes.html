@@ -1,0 +1,120 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Exampled of prototypes
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Change the page title here -->
+      <h1>
+        Prototypes
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Examples for new starters</span>
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <hr>
+
+            <ul class="nhsuk-grid-row nhsuk-card-group">
+
+              <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/lateralflow-v5/lft-start-page">Lateral Flow Test</a></h2>
+                    <p class="nhsuk-card__description">Lateral flow test prototype versions.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="anticoagulant/patient-details">Anti-coagulants</a></h2>
+                    <p class="nhsuk-card__description">Anti-coagulents.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="covid-antivirals/version1">Covid Antivirals</a></h2>
+                    <p class="nhsuk-card__description">Covid Antivirals.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="ppc-hrt-ppc-v2/ppc-or-hrt-generic-start-page">PPC and HRT PPC</a></h2>
+                    <p class="nhsuk-card__description">PPC and HRT.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="hee-index">MYS CI</a></h2>
+                    <p class="nhsuk-card__description">HEE.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="document-upload/upload-start">Document Upload</a></h2>
+                    <p class="nhsuk-card__description">MYS Document Upload.</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+    
+          <ul class="nhsuk-grid-row nhsuk-card-group">
+              <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="fp34d/fp34d">High volume vaccinations</a></h2>
+                    <p class="nhsuk-card__description">Digital journey for FP34D (appendix) form.  Includes field from submission document.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="#">Placeholder</a></h2>
+                    <p class="nhsuk-card__description">Placeholder for next project.</p>
+                  </div>
+                </div>
+              </li>
+          <ul>   
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

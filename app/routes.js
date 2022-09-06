@@ -513,6 +513,16 @@ router.get(/updateSchool/, function (req, res) {
   }
 });
 
+router.get(/updateAddPerformer/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('update-performer-list-with-search'); 
+  } else if (req.query.radioInlineGroup === "No" ) {
+    res.redirect('caseworker-nav');
+  } else {
+    res.redirect('update-performer-confirmation-with-errors');
+  }
+});
+
 router.get(/updateOdsConfirm/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
     res.redirect('update-performer-list'); 
@@ -521,7 +531,7 @@ router.get(/updateOdsConfirm/, function (req, res) {
   }
 });
 
-// VDPR routes //
+// VDPS routes //
 
 router.get(/choosePath/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
@@ -674,6 +684,128 @@ router.get(/personDeceased/, function (req, res) {
     res.redirect('part2-disabled-persons-date-of-death'); 
   } else {
     res.redirect('part2-disabled-persons-nhs-no');
+  }
+});
+
+// Copied in 6 Sept 2022 //
+
+router.get(/ppcEmail/, function (req, res) {
+  if (req.query.radioInlineGroup === "Email" ) {
+    res.redirect('ppc-customer-email1');
+    } else {
+    res.redirect('ppc-cya');
+  }
+});
+
+router.get(/hrtPpcEmail/, function (req, res) {
+  if (req.query.radioInlineGroup === "Email" ) {
+    res.redirect('hrtppc-customer-email1');
+    } else {
+    res.redirect('hrtppc-cya');
+  }
+});
+
+router.get(/hrtHrtEmail/, function (req, res) {
+  if (req.query.radioInlineGroup === "Email" ) {
+    res.redirect('hrt-customer-email1');
+    } else {
+    res.redirect('hrt-cya');
+  }
+});
+
+router.get(/ppcHrtQuestion/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('ppc-or-hrt-ppc-start-page');
+    } else {
+    res.redirect('ppc-or-hrt-hrt-start-page');
+  }
+});
+
+router.get(/ppcPpcEmail/, function (req, res) {
+  if (req.query.radioInlineGroup === "Email" ) {
+    res.redirect('ppc-or-hrt-ppc-customer-email1');
+    } else {
+    res.redirect('ppc-or-hrt-ppc-cya');
+  }
+});
+
+router.get(/ppcNoteducation/, function (req, res) {
+  if (req.query.radioInlineGroup === "Email" ) {
+    res.redirect('ppc-16-18');
+    } else {
+    res.redirect('ppc-16-18-ko');
+  }
+});
+
+router.get(/addAnotherClaim/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('hee-confirm-any-more');
+    } else {
+    res.redirect('hee-trainees');
+  }
+});
+
+router.get(/addAnotherTrainee/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('hee-select-trainee-type');
+    } else {
+    res.redirect('hee-foundation-pharmacist-cya');
+  }
+});
+
+router.get(/addTraineeFour/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('hee-select-trainee-type');
+    } else {
+    res.redirect('hee-trainees-norec');
+  }
+});
+
+router.get(/claimTrainee/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('hee-declaration');
+    } else {
+    res.redirect('hee-trainees');
+  }
+});
+
+router.get(/claimOneOff/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('hee-confirm-any-more');
+    } else {
+    res.redirect('hee-trainees');
+  }
+});
+
+router.get(/addAnyMore/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('hee-trainees');
+    } else {
+    res.redirect('hee-all-trainees-summary');
+  }
+});
+
+router.get(/addAnyExtras/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('hee-trainees');
+    } else {
+    res.redirect('hee-trainees');
+  }
+});
+
+router.get(/claimMoreMonths/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('hee-start-page');
+    } else {
+    res.redirect('hee-all-trainees-summary');
+  }
+});
+
+router.get(/claimAnotherMonth/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('hee-any-more-months-q');
+    } else {
+    res.redirect('hee-start-page');
   }
 });
 
